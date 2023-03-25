@@ -1,0 +1,147 @@
+{
+   "experiment": {
+      "logdir": "./log",
+      "seed": 42,
+      "cmd": "/home/jiangnan/Desktop/CVGP_code_implementation/dso/dso/dso/run.py /home/jiangnan/Desktop/CVGP_code_implementation/dso/dataset/inv_nv5_nt58/prog_0_DSR_inv_nrmse.json",
+      "timestamp": "2023-01-26-041854",
+      "task_name": ".__dso_dataset_inv_nv5_nt58_prog_0",
+      "save_path": "./log/.__dso_dataset_inv_nv5_nt58_prog_0_2023-01-26-041854"
+   },
+   "task": {
+      "task_type": "regression",
+      "dataset": ".//dso/dataset/inv_nv5_nt58/prog_0.csv",
+      "function_set": [
+         "add",
+         "sub",
+         "mul",
+         "div",
+         "inv",
+         "const"
+      ],
+      "metric": "inv_nrmse",
+      "metric_params": [
+         1.0
+      ],
+      "extra_metric_test": null,
+      "extra_metric_test_params": [],
+      "threshold": 1e-12,
+      "protected": false,
+      "reward_noise": 0.0,
+      "reward_noise_type": "r",
+      "normalize_variance": false,
+      "decision_tree_threshold_set": []
+   },
+   "training": {
+      "n_epochs": null,
+      "n_samples": 50000,
+      "batch_size": 1024,
+      "epsilon": 0.02,
+      "baseline": "R_e",
+      "alpha": 0.5,
+      "b_jumpstart": false,
+      "n_cores_batch": 4,
+      "complexity": "token",
+      "const_optimizer": "scipy",
+      "const_params": {},
+      "verbose": true,
+      "debug": 0,
+      "early_stopping": true,
+      "hof": 100,
+      "use_memory": false,
+      "memory_capacity": 1000.0,
+      "warm_start": null,
+      "memory_threshold": null,
+      "save_all_epoch": true,
+      "save_summary": false,
+      "save_positional_entropy": false,
+      "save_pareto_front": true,
+      "save_cache": false,
+      "save_cache_r_min": 0.9,
+      "save_freq": 5,
+      "save_token_count": false
+   },
+   "state_manager": {
+      "type": "hierarchical",
+      "observe_action": false,
+      "observe_parent": true,
+      "observe_sibling": true,
+      "observe_dangling": false,
+      "embedding": false,
+      "embedding_size": 8
+   },
+   "controller": {
+      "max_length": 256,
+      "cell": "lstm",
+      "num_layers": 1,
+      "num_units": 32,
+      "initializer": "zeros",
+      "learning_rate": 0.0025,
+      "optimizer": "adam",
+      "entropy_weight": 0.03,
+      "entropy_gamma": 0.7,
+      "pqt": false,
+      "pqt_k": 10,
+      "pqt_batch_size": 1,
+      "pqt_weight": 200.0,
+      "pqt_use_pg": false,
+      "summary": false
+   },
+   "gp_meld": {
+      "run_gp_meld": false,
+      "verbose": false,
+      "generations": 20,
+      "p_crossover": 0.5,
+      "p_mutate": 0.5,
+      "tournament_size": 5,
+      "train_n": 50,
+      "mutate_tree_max": 3
+   },
+   "prior": {
+      "count_constraints": false,
+      "relational": {
+         "targets": [],
+         "effectors": [],
+         "relationship": null,
+         "on": false
+      },
+      "length": {
+         "min_": 4,
+         "max_": 256,
+         "on": true
+      },
+      "repeat": {
+         "tokens": "const",
+         "min_": null,
+         "max_": 10,
+         "on": true
+      },
+      "inverse": {
+         "on": true
+      },
+      "trig": {
+         "on": true
+      },
+      "const": {
+         "on": true
+      },
+      "no_inputs": {
+         "on": true
+      },
+      "uniform_arity": {
+         "on": false
+      },
+      "soft_length": {
+         "loc": 10,
+         "scale": 5,
+         "on": true
+      },
+      "language_model": {
+         "weight": null,
+         "on": false
+      }
+   },
+   "postprocess": {
+      "show_count": 5,
+      "save_plots": true
+   }
+}
