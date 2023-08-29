@@ -1,5 +1,4 @@
-# README： Symbolic Regression via Control Variable
-Genetic Programming#
+# README： Symbolic Regression via Control Variable Genetic Programming #
 
 
 ## 0. Prerequisites
