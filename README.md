@@ -1,7 +1,8 @@
-# README #
+# README： Symbolic Regression via Control Variable
+Genetic Programming#
 
 
-## 0. Prequisites
+## 0. Prerequisites
 
 ### 0.1 Dependency packages
 ```bash
