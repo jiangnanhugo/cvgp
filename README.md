@@ -1,5 +1,7 @@
 # README： Symbolic Regression via Control Variable Genetic Programming #
 
+This is the code implemetation of paper accepted at ECML-PKDD 2023 with title: [
+Symbolic Regression via Control Variable Genetic Programming](https://link.springer.com/chapter/10.1007/978-3-031-43421-1_11).
 
 ## 0. Prerequisites
 
@@ -76,5 +78,20 @@ Just open the `plots` folder
 ## 4. Parse your own results
 ```bash
 ./result/summary_output.sh
+```
+# Cite
+
+```bib
+ @InProceedings{10.1007/978-3-031-43421-1_11,
+ author="Jiang, Nan
+ and Xue, Yexiang",
+ title="Symbolic Regression via Control Variable Genetic Programming",
+ booktitle="Machine Learning and Knowledge Discovery in Databases: Research Track",
+ year="2023",
+ publisher="Springer Nature Switzerland",
+ address="Cham",
+ pages="178--195",
+ isbn="978-3-031-43421-1"
+ }
 ```
 
